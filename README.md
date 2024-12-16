@@ -13,15 +13,15 @@ Se implementará una aplicación web sencilla sin servidor que permite a los usu
 
 ## 1: Alojamiento web estático
 
-<img width="636" alt="Captura de pantalla 2024-11-27 a la(s) 2 25 25 p m" src="https://github.com/user-attachments/assets/59dbc66b-26a2-40e5-a748-a39fb511be00">
+<img width="642" alt="Captura de pantalla 2024-12-16 a la(s) 9 16 57" src="https://github.com/user-attachments/assets/102657c0-85ea-49b2-bc7a-b9bc8e90cdcb" />
 
 En espe punto se ha optado por utilizar el presente repositorio Github para manejo del código fuente y utilizaremos la consula `AWS Amplify` para implementar el sitio web. Amplify se encarga de configurar un lugar para almacenar el código de la aplicación web estática. Todo el contenido web estático, incluidos los archivos HTML, CSS, JavaScript y de imagen, entre otros, serán administrados por la consola de AWS Amplify. Después, los usuarios finales obtendrán acceso al sitio mediante la URL de sitio web público que se expone en la consola de AWS Amplify.
 
-<img width="1172" alt="Captura de pantalla 2024-11-27 a la(s) 2 42 32 p m" src="https://github.com/user-attachments/assets/e3ec24b8-6e8c-4e67-8f92-a6e5b7d2fef0">
+<img width="1013" alt="Captura de pantalla 2024-12-16 a la(s) 9 17 28" src="https://github.com/user-attachments/assets/a3cc6b16-0ff9-424e-aabc-4833b7c1ce9f" />
 
 En la imagen adjunta se puede evidenciar ya implementada la aplicación web estatica en AWS Amplify y nos indica el dominio público al cuál podemos acceder a la misma.
 
-<img width="1377" alt="Captura de pantalla 2024-11-27 a la(s) 2 44 02 p m" src="https://github.com/user-attachments/assets/aaf4102a-f248-49ec-8140-040aa8028a91">
+<img width="1013" alt="Captura de pantalla 2024-12-16 a la(s) 9 17 46" src="https://github.com/user-attachments/assets/80164d08-2c11-431b-91ad-cdcadccfa8cd" />
 
 
 **Nota:** Si se realiza cualquier modificación al sitio en el código fuente, este deberá ser actualizado y replicado en el repositorio Github para que este a su vez sea implementado en la consola de AWS Amplify.
