@@ -4,7 +4,7 @@ Se implementará una aplicación web sencilla sin servidor que permite a los usu
 
 **Acá se muestra la arquitectura de aplicaciones.**
 
-<img width="633" alt="Captura de pantalla 2024-11-27 a la(s) 1 03 27 p m" src="https://github.com/user-attachments/assets/51288874-335a-4dc8-936a-cb627a0f20eb">
+<img width="631" alt="Captura de pantalla 2024-12-16 a la(s) 9 14 34" src="https://github.com/user-attachments/assets/f24af07b-c970-448f-ba59-baa2de4221e0" />
 
  * **Alojamiento web estático:** AWS Amplify aloja recursos web estáticos como HTML, CSS, JavaScript entre otros.
  * **Administración de usuarios:** Amazon Cognito proporciona funciones de administración y autenticación de usuarios.
