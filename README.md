@@ -28,17 +28,17 @@ En la imagen adjunta se puede evidenciar ya implementada la aplicación web esta
 
 ## 2: Administración de usuarios
 
-<img width="545" alt="Captura de pantalla 2024-11-27 a la(s) 2 25 57 p m" src="https://github.com/user-attachments/assets/992eba50-8b2d-45b4-8b09-780dc37dcfeb">
+<img width="522" alt="Captura de pantalla 2024-12-16 a la(s) 9 25 10" src="https://github.com/user-attachments/assets/5c37e484-1f52-4b3b-93ad-a7b50ba2d2c5" />
 
 Para la administración de usuarios se utiliza `Amazon Cognito` para administrar las cuentas de los usuarios, se immplementará páginas que permiten a los usuarios registrarse como nuevo usuarios, verificar su dirección de correo electrónico e iniciar sesión en el sitio.
 
 Una vez que los usuarios envíen su registro, Amazon Cognito enviará un correo electrónico de confirmación con un código de verificación a la dirección que hayan proporcionado. Para confirmar la cuenta, los usuarios deberán volver al sitio y especificarán la dirección de correo electrónico y el código de verificación que han recibido.
 
-<img width="452" alt="Captura de pantalla 2024-11-27 a la(s) 2 29 11 p m" src="https://github.com/user-attachments/assets/29747821-efba-4ce1-a296-7d48ce54005c">
+<img width="428" alt="Captura de pantalla 2024-12-16 a la(s) 9 18 06" src="https://github.com/user-attachments/assets/0aead749-0b8c-4d1f-af53-cff73360ba79" />
 
 Una vez confirmada la cuenta en la consola de Amazon Cognito podemos validar los usuarios `Confirmados` y `Habilitados`.
 
-<img width="1181" alt="Captura de pantalla 2024-11-27 a la(s) 2 30 05 p m" src="https://github.com/user-attachments/assets/4eb935fb-d329-49d1-91f1-79090410db54">
+<img width="1026" alt="Captura de pantalla 2024-12-16 a la(s) 9 18 22" src="https://github.com/user-attachments/assets/c4b2b7c7-c4ad-44de-8036-f28e36c22c2a" />
 
 Una vez que los usuarios tengan una cuenta confirmada podrán iniciar sesión. Al iniciar sesión, los usuarios especifican su nombre de usuario (o correo electrónico) y contraseña. A continuación, una función JavaScript se comunica con Amazon Cognito, se autentica con el protocolo `Secure Remote Password (SRP)` y se le devuelve un conjunto de tokens web `JSON (JWT)`. Los tokens `JWT` contienen notificaciones sobre la identidad del usuario.
 
@@ -46,7 +46,7 @@ Una vez que los usuarios tengan una cuenta confirmada podrán iniciar sesión. A
 
 En esta sección se utilizará `AWS Lambda` y `Amazon DynamoDB` para crear un proceso de backend destinado a administrar las solicitudes de la aplicación web. La aplicación antes implementada permite a los usuarios solicitar el envío de un unicornio a una ubicación de su elección. Para responder a esas solicitudes, el código JavaScript que se ejecuta en el navegador deberá invocar un servicio que se ejecuta en la nube.
 
-<img width="635" alt="Captura de pantalla 2024-11-27 a la(s) 2 40 38 p m" src="https://github.com/user-attachments/assets/1c887026-481b-4d8f-97b2-d221aa96ffbb">
+<img width="635" alt="Captura de pantalla 2024-12-16 a la(s) 9 25 48" src="https://github.com/user-attachments/assets/dab9e6a0-1688-4c49-9b3c-a6e737ebce77" />
 
 Se implementará una función Lambda que se invocará cada vez que un usuario solicite un unicornio. La función seleccionará un unicornio de la flota, registrará la solicitud en una tabla de DynamoDB y, después, responderá a la aplicación de frontend con detalles acerca del unicornio que se envía.
 
@@ -56,20 +56,20 @@ En esta sección se utilizará `Amazon API Gateway` para exponer la función de 
 
 Con esta configuración se convierte el sitio web alojado estáticamente en una aplicación web dinámica al agregar código JavaScript en el lado del cliente que realiza llamadas AJAX a las API expuestas.
 
-<img width="643" alt="Captura de pantalla 2024-11-27 a la(s) 2 52 07 p m" src="https://github.com/user-attachments/assets/6a7b6a60-e8ea-40af-823c-2d13c78c5c29">
+<img width="637" alt="Captura de pantalla 2024-12-16 a la(s) 9 26 15" src="https://github.com/user-attachments/assets/b7f09220-2810-4310-bb1e-12daef725211" />
 
 En el diagram anterior se muestra como la API Gateway se integra con los componentes existentes que se creó en los pasos antes descritos. Una vez que los usuarios registrados se autentiquen podrán seleccionar su ubicación de recogida haciendo clic en un punto del mapa y, a continuación, solicitando un paseo mediante el botón "Request Unicorn".
 
-<img width="1068" alt="Captura de pantalla 2024-11-27 a la(s) 2 59 18 p m" src="https://github.com/user-attachments/assets/b1b6bde7-e1a9-497e-8b69-6fd0e715d7b6">
+<img width="1014" alt="Captura de pantalla 2024-12-16 a la(s) 9 18 37" src="https://github.com/user-attachments/assets/f0266127-d84d-4165-9635-f7ec3a2520dd" />
 
 En la imagen anterior nos muestra un mensaje que hemos sido auntenticados y nos muestra un `Token de autenticación`, dicho token es devuelto por la función JavaScript que se comunica con Amazon Cognito y devuelve un conjunto de tokens web `JSON (JWT)` que contiene notificaciones sobre la autenticidad del usuario. Paso realizado en el punto 2.
 
 Una vez que seleccionamos un punto de recogida en el mapa le damos click en el botón `Request Unicorn`.
 
-<img width="988" alt="Captura de pantalla 2024-11-27 a la(s) 3 04 34 p m" src="https://github.com/user-attachments/assets/052bdc50-5c5b-4d46-b6ca-c7e17d4b78f3">
+<img width="991" alt="Captura de pantalla 2024-12-16 a la(s) 9 18 51" src="https://github.com/user-attachments/assets/3ed9d6c1-eeef-4920-9229-c9a03ccbdcdf" />
 
 Posterior a ello se debe ver una notificación en la barra lateral derecha de que un unicornio está en camino y, a continuación, ver un ícono de un unicornio que vuela hacia la ubicación de recogida. Posterior a su llegada al punto habrá una notificación de que el conductor ha llegado `Rocinante has arrived. Giddy up!`.
 
-![taller-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0e5fc2fc-ad01-47b3-ba2f-cf7edc1d6e81)
+![390555929-0e5fc2fc-ad01-47b3-ba2f-cf7edc1d6e81](https://github.com/user-attachments/assets/6219c1fa-1432-4898-9617-1f97801f4a37)
 
 Gracias.
